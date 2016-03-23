@@ -80,6 +80,7 @@ int main (){
         R5.reduz();
         std :: cout << "\n\n O resultado de 2/R3 é:  " << R5;
         //hello its me, i was wonderi
+        //hello its me, i was wonderiededed
         
 //*************************************************************************
 //               TESTANDO OPERADORES LÓGICOS ENTRE RACIONAIS
