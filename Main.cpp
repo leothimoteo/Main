@@ -91,6 +91,8 @@ int main (){
         R4<=R2? std :: cout << "\n\n R4<=R2": std :: cout << "\n\n R4>R2";
         R4>=R2? std :: cout << "\n\n R4>=R2": std :: cout << "\n\n R4<R2";
         R2>R1? std :: cout << "\n\n R2>R1": std :: cout << "\n\n R1>R2"; //oi
+        R3>R1? std :: cout << "\n\n R3>R1": std :: cout << "\n\n R1>R3"; //oi
+        
         
 //*************************************************************************
 //               TESTANDO OPERADORES LÓGICOS ENTRE RACIONAIS
