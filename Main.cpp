@@ -1,5 +1,5 @@
 //// Construir um programa que associe funções aos operadores lógico-matemáticos
-//// Autor: Cairo Martins e Leonardo Thimoteo, 12.03.2016
+//// Autor: Cairo Martins e Leonardo Thimoteo cuzao, 12.03.2016
 //// Status: Completo
 
 
