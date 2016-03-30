@@ -8,9 +8,15 @@
 #include <iostream>
 
 int main (){
-	Racional R1, R2 (-3), R3(2,-3), R4 (R2), R5;
+	Racional R1, R2 (-3), R3(2,-3), R4 (R2), R5, R6;
         R3.reduz();
         R4.reduz();
+        
+        std :: cout << "Digite um número Racional" << std :: endl;
+        std :: cin >> R6;
+        R6.reduz();
+        std :: cout << "R6= " << R6;
+        
    
 //*********************************************************************************
 //                TESTANDO OPERADORES MATEMÁTICOS ENTRE RACIONAIS
@@ -18,7 +24,7 @@ int main (){
         
         R5 = R3+ R2;
         R5.reduz();
-        std :: cout << "O resultado de R3+R2 é:   "<< R5;
+        std :: cout << "\nO resultado de R3+R2 é:   "<< R5;
         R5 = R3-R2;
         R5.reduz();
         std :: cout << "\n\n O resultado de R3-R2 é:  " << R5;

@@ -5,6 +5,7 @@
 //------------------ Definindo classe Racionais -------------------
 class Racional {
     friend const std :: ostream& operator << (std :: ostream&, const Racional &);
+    friend const std :: istream& operator >> (std :: istream&, Racional &);
     friend const Racional operator/ (const int &, const Racional&);
          
 	public:

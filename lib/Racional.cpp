@@ -41,11 +41,12 @@ const std :: ostream &operator << (std :: ostream&_os, const Racional &rac)
 	return _os;
 	
 }
-//// ------------------------- 2.3 Operador >> ----------------------------------------
-//std :: ostream &operator >> (std :: ostream&_os, const Racional &rac){
-//	_os >> rac.nume >> "/" >> rac.deno;
-//	return _os;
-
+// ------------------------- 2.3 Operador >> ----------------------------------------
+const std :: istream &operator >> (std :: istream&_os, Racional &rac)
+{
+	_os >> rac.nume >> rac.deno;
+	return _os;
+}
 // -------------------------- 2.4 Operador - ----------------------------------------
 const Racional Racional :: operator- (const Racional &rac) const 
 {
