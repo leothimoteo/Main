@@ -66,12 +66,12 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/main.exe: ${OBJECTFILES}
 ${OBJECTDIR}/Main.o: Main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -IInclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Main.o Main.cpp
+	$(COMPILE.cc) -g -IInclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Main.o Main.cpp
 
 ${OBJECTDIR}/lib/Racional.o: lib/Racional.cpp 
 	${MKDIR} -p ${OBJECTDIR}/lib
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -IInclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/Racional.o lib/Racional.cpp
+	$(COMPILE.cc) -g -IInclude -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lib/Racional.o lib/Racional.cpp
 
 # Subprojects
 .build-subprojects:

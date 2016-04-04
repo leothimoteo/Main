@@ -38,7 +38,6 @@
       </toolsSet>
       <compileType>
         <ccTool>
-          <standard>8</standard>
           <incDir>
             <pElem>Include</pElem>
           </incDir>

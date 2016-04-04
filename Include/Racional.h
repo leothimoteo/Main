@@ -7,6 +7,9 @@ class Racional {
     friend const std :: ostream& operator << (std :: ostream&, const Racional &);
     friend const std :: istream& operator >> (std :: istream&, Racional &);
     friend const Racional operator/ (const int &, const Racional&);
+    friend const Racional operator+ (const int &, const Racional&);
+    friend const Racional operator- (const int &, const Racional&);
+    friend const Racional operator* (const int &, const Racional&);
          
 	public:
             int nume, deno;
@@ -63,21 +66,25 @@ class Racional {
 ///                   operador divisão
 ///*********************************************************************
             
+            const Racional operator+ (const int &) const;
+            const Racional operator- (const int &) const;
+            const Racional operator* (const int &) const;
             const Racional operator/ (const int &) const;
             
             
 ///*********************************************************************
 ///         Define função que reduz fração
 ///*********************************************************************                      
-            Racional reduz ();         
+ Racional reduz ();       
+ 
+ ///*********************************************************************
+///         Funções INLINE
+///**********************************************************************
+ inline const  int Nume() const {return nume;}
+ inline const  int Deno() const {return deno;}
+ 
 };
-///*******************************************************************
-///            Define operações com inteiros
-///*******************************************************************
 
-const Racional operator+ (const int &, const Racional &);
-const Racional operator- (const int &, const Racional &);
-const Racional operator* (const int &, const Racional &);
 
 
 

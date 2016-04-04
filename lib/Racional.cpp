@@ -29,9 +29,7 @@ return *this;
 // -------------------------- 2.2 Operador + ----------------------------------------
 const Racional Racional :: operator+ (const Racional &rac) const 
 {
-	resposta.deno = (rac.deno * deno);
-	resposta.nume = (rac.deno * nume)+ (rac.nume * deno);
-	return resposta; 
+	return Racional(rac.deno * nume + rac.nume * deno, rac.deno * deno); 
 } 
 
 // ------------------------- 2.3 Operador << ----------------------------------------
@@ -81,21 +79,25 @@ const Racional Racional :: operator/ (const Racional &rac) const
 const Racional& Racional :: operator+= (const int &_val) 
 {
     nume+= _val*deno;
+    return *this;
 }
 // -------------------------- 2.8 Operador -= ----------------------------------------  
 const Racional& Racional :: operator-= (const int &_val) 
 {
     nume-=_val*deno;
+    return *this;
 }
 // -------------------------- 2.9 Operador *= ----------------------------------------
 const Racional& Racional :: operator*= (const int &_val)
 {
-    nume=nume*_val;    
+    nume=nume*_val;
+    return *this;    
 }
 // -------------------------- 2.10 Operador /= ----------------------------------------
 const Racional& Racional :: operator/= (const int &_val) 
 {
     deno*=_val;
+    return *this;
 }
 // -------------------------- 2.11 Operador ++ ----------------------------------------
 Racional Racional :: operator++ () 
@@ -118,14 +120,7 @@ const Racional operator+ (const int &_val, const Racional &_rac)
 // -------------------------- 3.2 Operador - -------------------------------------------
 const Racional operator- (const int &_val, const Racional &_rac) 
 {
-    if (_val < 0) 
-    {
-        return Racional (_rac.nume - _rac.deno * _val, _rac.deno);
-    }
-    else 
-    {
-        return Racional ( _rac.deno * _val - _rac.nume , _rac.deno);       
-    }
+    return Racional(_val * _rac.deno - _rac.nume, _rac.deno);
 }
 
 // -------------------------- 3.3 Operador * -------------------------------------------
@@ -241,4 +236,10 @@ Racional Racional:: reduz()              //Encontra M.D.C entre numerador e deno
 		}
 	}
 return Racional (nume,deno);
+}
+
+
+const Racional Racional::operator+ (const int & _val) const
+{
+    return Racional(nume + deno * _val, deno);
 }

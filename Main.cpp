@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <Racional.h>
 #include <iostream>
+void Fx(const Racional&);
 
 int main (){
 	Racional R1, R2 (-3), R3(2,-3), R4 (R2), R5, R6;
@@ -61,8 +62,8 @@ int main (){
         R5 = 2+ R3;                
         R5.reduz();
         std :: cout << "\n\n O resultado de 2+R3 é:  " << R5; 
-        R5 = R3-1;
-        R5.reduz();
+//        R5 = R3-1;
+//        R5.reduz();
         std :: cout << "\n\n O resultado de R3-1 é:  " << R5; 
         R5 = 1-R3;
         R5.reduz();
@@ -70,8 +71,8 @@ int main (){
         R5 = 3*R4;
         R5.reduz();
         std :: cout << "\n\n O resultado de 3*R4 é:  " << R5; 
-        R5 = R4*5;
-        R5.reduz();
+        //R5 = R4*5;
+       // R5.reduz();
         std :: cout << "\n\n O resultado de R4*5 é:  " << R5; 
         R5= ++R3;
         R5.reduz();
@@ -111,4 +112,14 @@ int main (){
         R2<7? std:: cout << "\n\n R2<7": std :: cout << "\n\n R2>7";
         R2>=7? std:: cout << "\n\n R2>=7": std :: cout << "\n\n R2<7";
         R2<=7? std:: cout << "\n\n R2<=7\n\n": std :: cout << "\n\n R2>7\n\n";
+        
+        Fx(R2);
+        Fx(R3);
 }
+//==============================================================================
+// Apresentação do Numerador e do Denominador do número Racional
+//==============================================================================
+void Fx ( const Racional& _rac){       
+    std :: cout << "Numerador:  " << _rac.Nume() << "\nDenominador: " << _rac.Deno() <<std :: endl; 
+}
+
