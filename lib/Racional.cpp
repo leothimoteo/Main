@@ -13,7 +13,6 @@ Racional:: Racional (const int &_a, const int &_b) : nume (_a), deno (_b)
         nume=0, deno=1;
      }
 }
-
 //********************* 2. Definindo operadores matemáticos *************************
 
 // -------------------------- 2.1 Operador = ----------------------------------------
@@ -48,16 +47,13 @@ const std :: istream &operator >> (std :: istream&_os, Racional &rac)
 // -------------------------- 2.4 Operador - ----------------------------------------
 const Racional Racional :: operator- (const Racional &rac) const 
 {
-	resposta.deno = (rac.deno * deno);
-	resposta.nume = (rac.deno * nume)- (rac.nume * deno);
-	return resposta; 
+
+	return Racional((rac.deno * nume)- (rac.nume * deno),rac.deno * deno); 
 } 
 // -------------------------- 2.5 Operador * ----------------------------------------
 const Racional Racional :: operator* (const Racional &rac) const 
 {
-	resposta.deno = (rac.deno * deno);
-	resposta.nume = (rac.nume * nume);
-	return resposta; 
+	return Racional (rac.nume * nume,rac.deno * deno); 
 } 
 // -------------------------- 2.6 Operador / ----------------------------------------
 const Racional Racional :: operator/ (const Racional &rac) const 
@@ -69,10 +65,9 @@ const Racional Racional :: operator/ (const Racional &rac) const
         return resposta;
     }
     else 
-        {
-        resposta.nume = (nume * rac.deno);
-        resposta.deno = (rac.nume *deno);
-        return resposta;                
+    {
+//       
+        return Racional(nume * rac.deno,rac.nume *deno);                
     }
 }
 // -------------------------- 2.7 Operador += ----------------------------------------     

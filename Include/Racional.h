@@ -69,20 +69,20 @@ class Racional {
             const Racional operator+ (const int &) const;
             const Racional operator- (const int &) const;
             const Racional operator* (const int &) const;
-            const Racional operator/ (const int &) const;
-            
-            
-///*********************************************************************
-///         Define função que reduz fração
-///*********************************************************************                      
- Racional reduz ();       
- 
+            const Racional operator/ (const int &) const;                     
+       
  ///*********************************************************************
 ///         Funções INLINE
 ///**********************************************************************
  inline const  int Nume() const {return nume;}
  inline const  int Deno() const {return deno;}
  
+///*********************************************************************
+///         Define função que reduz fração
+///********************************************************************* 
+ 
+private: // será acessado apenas pela classe
+    Racional reduz ();
 };
 
 
